@@ -1,0 +1,9 @@
+{
+  "name": "K8s Test Env",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y docker.io curl git && curl -Lo kind https://kind.sigs.k8s.io/dl/v0.21.0/kind-linux-amd64 && chmod +x kind && sudo mv kind /usr/local/bin/ && curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/local/bin/",
+  "remoteUser": "vscode",
+  "features": {
+    "docker-in-docker": "latest"
+  }
+}
